@@ -110,7 +110,7 @@
 \setdefaultlanguage{german}
 \setotherlanguage{english}
 
-% \addbibresource{sources.bib}
+\addbibresource{sources.bib}
 
 \graphicspath{{media/}}  
 
@@ -125,20 +125,21 @@
   bookmarksnumbered=true,
   breaklinks=true,
   pdfauthor=Jan Hoegen,
-  pdftitle=Vorstellung der Automatisierungstechnik,
+  pdftitle={Leibnitz-Institut für innovative Mikroelektronik},
 }
 
 
 %___________________________________________________________________
 % Ttile Page
 
-\title{Vertiefung Automatisierungstechnik}
-\subtitle{Elektro- und Informationstechnik Bachelor}
+\title{Leibnitz-Institut für innovative Mikroelektronik}
+\subtitle{Bewertung des Jahresabschlussberichts 2024}
 \date{\today}
 \author{Jan Hoegen}
 \institute{
-    Fachschaft EIT\\
-    Hochschule Karlsruhe\\
+    Kompaktwissen BWL\\
+    Studium Generale\\
+    Hochschule Karlsruhe
 }
 % \setbeamertemplate{frame footer}{EITB AUT. Jan Hoegen}
 
@@ -147,15 +148,23 @@
 % Document
 
 \begin{document}
-    \maketitle
+  \maketitle
 
-    % \begin{frame}{Inhaltsverzeichnis}
-    % \setbeamertemplate{section in toc}[sections numbered]
-    % \tableofcontents[hideallsubsections]
-    % % \tableofcontents
-    % \end{frame}
+  % \begin{frame}{Inhaltsverzeichnis}
+  % \setbeamertemplate{section in toc}[sections numbered]
+  % \tableofcontents[hideallsubsections]
+  % % \tableofcontents
+  % \end{frame}
 
-    \input{chapters/chapter_1.tex}
-    \input{chapters/module.tex}
+  \input{chapters/einführung.tex}
+  \input{chapters/bilanz.tex}
+  \input{chapters/kpi.tex}
+
+
+  %___________________________________________________________________
+  \begin{frame}{Literatur}
+    \nocite{*}
+    \printbibliography[heading=none]
+  \end{frame}
 
 \end{document}
