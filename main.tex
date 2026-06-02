@@ -41,7 +41,7 @@
   range-units=repeat,
   range-phrase={{~bis~}}
 ]{siunitx}
-\usepackage{eurosym}
+% \usepackage{eurosym}
 
 \usepackage{amsmath}
 
@@ -141,16 +141,25 @@
   detect-weight = true,
   detect-family = true
 }
-\DeclareSIUnit{\sieuro}{\mbox{\euro}}
+% \DeclareSIUnit{\euro}{\mbox{\euro}}
+\DeclareSIUnit{\euro}{€}
 
 \urlstyle{same}		% URL in normal text font
 
 \newcommand{\topic}[1]{#1}
 \newcommand{\numtopic}[1]{#1}
-\newcommand{\subtopic}[1]{\hspace{0.5em}\itshape\footnotesize #1}
+\newcommand{\subtopic}[1]{\hspace{0.6em}\itshape\footnotesize #1}
 \newcommand{\subnumtopic}[1]{\itshape\footnotesize #1}
 
 \renewcommand{\arraystretch}{1.1}
+
+
+\newcommand{\kpi}[4]{%
+    {\Large \textbf{#1} \hfill \alert{#2}}\\[0.5ex]%
+    % {\large\bfseries #1} \hfill {\Large\alert{\textbf{#2}}}\\[0.5ex]%
+    {\scriptsize\color{darkgray}\textbf{Berechnung:} #3}\\[0.5ex]%
+    {\small #4}\\[2em]%
+}
 
 
 %___________________________________________________________________
