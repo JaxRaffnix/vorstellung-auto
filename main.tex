@@ -148,17 +148,16 @@
 
 \newcommand{\topic}[1]{#1}
 \newcommand{\numtopic}[1]{#1}
-\newcommand{\subtopic}[1]{\hspace{0.6em}\itshape\footnotesize #1}
-\newcommand{\subnumtopic}[1]{\itshape\footnotesize #1}
+\newcommand{\subtopic}[1]{\hspace{0.6em}\footnotesize\itshape#1}
+\newcommand{\subnumtopic}[1]{\footnotesize\itshape#1}
 
 \renewcommand{\arraystretch}{1.1}
 
 
 \newcommand{\kpi}[4]{%
-    {\Large \textbf{#1} \hfill \alert{#2}}\\[0.5ex]%
-    % {\large\bfseries #1} \hfill {\Large\alert{\textbf{#2}}}\\[0.5ex]%
-    {\scriptsize\color{darkgray}\textbf{Berechnung:} #3}\\[0.5ex]%
-    {\small #4}\\[2em]%
+    {\large\bfseries#1\hfill\alert{#2}}\\[0.5ex]%
+    {\scriptsize\textcolor{darkgray}{\textbf{Berechnung:}~#3}}\\[0.5ex]%
+    {#4}\\[2em]%
 }
 
 
