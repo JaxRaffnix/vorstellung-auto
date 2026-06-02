@@ -17,6 +17,8 @@
 
 \usepackage{fontspec}               % required for system fonts
 \usepackage{microtype}              % better typography
+\usepackage{FiraSans}
+
 \usepackage{polyglossia}            % languages
 
 % \usepackage{enumitem}
@@ -39,6 +41,7 @@
   range-units=repeat,
   range-phrase={{~bis~}}
 ]{siunitx}
+\usepackage{eurosym}
 
 \usepackage{amsmath}
 
@@ -53,8 +56,12 @@
 \usepackage{tabularx}
 \usepackage{longtable}
 \usepackage{subcaption}	
+\usepackage{adjustbox}
 
 \usepackage{appendixnumberbeamer}
+
+\usepackage{xurl}
+\usepackage{bookmark}
 
 \usetheme[]{metropolis}     % beamer style
 
@@ -63,7 +70,7 @@
 % Dimensions
 
 \newlength{\imagewidth}
-\setlength{\imagewidth}{1\columnwidth}
+\setlength{\imagewidth}{0.5\columnwidth}
 
 \newlength{\imageheight}
 \setlength{\imageheight}{0.85\textheight}
@@ -128,6 +135,23 @@
   pdftitle={Leibnitz-Institut für innovative Mikroelektronik},
 }
 
+\sisetup{
+  output-decimal-marker = {,},
+  group-separator = {.},
+  detect-weight = true,
+  detect-family = true
+}
+\DeclareSIUnit{\sieuro}{\mbox{\euro}}
+
+\urlstyle{same}		% URL in normal text font
+
+\newcommand{\topic}[1]{#1}
+\newcommand{\numtopic}[1]{#1}
+\newcommand{\subtopic}[1]{\hspace{0.5em}\itshape\footnotesize #1}
+\newcommand{\subnumtopic}[1]{\itshape\footnotesize #1}
+
+\renewcommand{\arraystretch}{1.1}
+
 
 %___________________________________________________________________
 % Ttile Page
@@ -158,13 +182,9 @@
 
   \input{chapters/einführung.tex}
   \input{chapters/bilanz.tex}
+  \input{chapters/gv.tex}
   \input{chapters/kpi.tex}
 
-
-  %___________________________________________________________________
-  \begin{frame}{Literatur}
-    \nocite{*}
-    \printbibliography[heading=none]
-  \end{frame}
+  \input{chapters/appendix.tex}
 
 \end{document}
